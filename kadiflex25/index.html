@@ -1,1 +1,316 @@
 
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KADIFLEX® 25 - Información Médica Profesional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7E1A03",
+                        "danger": "#dc3545",
+                        "warning": "#ffc107",
+                        "background-light": "#f9fafb",
+                        "background-dark": "#111827",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .progress-bar-container {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            width: 100%;
+            z-index: 40;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Sticky Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-[960px] mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<span class="font-extrabold text-xl tracking-tight">KADIFLEX® 25</span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#indicaciones">Indicaciones</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#dosificacion">Modo de Empleo</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#advertencias">Seguridad</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#efectos">Efectos</a>
+</div>
+<button class="md:hidden text-slate-600">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Progress Bar Indicator -->
+<div class="h-1 bg-slate-100 dark:bg-slate-800 w-full">
+<div class="h-full bg-primary" style="width: 35%;"></div>
+</div>
+</header>
+<main class="max-w-[800px] mx-auto px-4 py-8">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="rounded-xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<h1 class="text-4xl md:text-5xl font-extrabold mb-2 leading-tight">Kadiflex® 25</h1>
+<p class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-2">Solución inyectable</p>
+<p class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-2">Vitaminas Neurotropas</p>
+<p class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4">Diclofenaco Sódico</p>
+<div class="flex gap-3">
+<a class="bg-primary text-white px-6 py-3 rounded-lg font-bold text-center flex-1 md:flex-none" href="#dosificacion">Modo de Empleo</a>
+</div>
+</div>
+<div class="md:w-1/2 min-h-[300px] bg-slate-100 relative overflow-hidden">
+<img class="w-full h-full object-contain p-8" alt="KADIFLEX - Caja del producto" src="Kadiflex.png"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Access Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#indicaciones">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">stethoscope</span>
+<span class="text-sm font-bold">Indicaciones</span>
+</a>
+<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#dosificacion">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">schedule</span>
+<span class="text-sm font-bold">Modo de Empleo</span>
+</a>
+<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#advertencias">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">report_problem</span>
+<span class="text-sm font-bold">Advertencias</span>
+</a>
+<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#efectos">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">analytics</span>
+<span class="text-sm font-bold">Efectos</span>
+</a>
+</section>
+
+<!-- Composition Card -->
+<section class="mb-12 bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">science</span>
+                COMPOSICIÓN
+            </h2>
+
+<!-- Ampolla No. 1 -->
+<div class="bg-background-light dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary mb-4">
+<p class="text-lg font-bold mb-3">Cada ampolla No.1 de 1 mL contiene:</p>
+<div class="space-y-2">
+<p class="text-base"><span class="font-semibold">Vitamina B1</span> (Clorhidrato de tiamina) <span class="float-right font-extrabold text-primary">100 mg</span></p>
+<p class="text-base"><span class="font-semibold">Vitamina B6</span> (Clorhidrato de piridoxina) <span class="float-right font-extrabold text-primary">100 mg</span></p>
+<p class="text-base"><span class="font-semibold">Vitamina B12</span> (Cianocobalamina) <span class="float-right font-extrabold text-primary">4,000 mcg</span></p>
+<p class="text-base"><span class="font-semibold">Vitamina B12 Retard</span> (Hidroxocobalamina) <span class="float-right font-extrabold text-primary">1,000 mcg</span></p>
+<p class="text-base"><span class="font-semibold">Lidocaína HCl</span> <span class="float-right font-extrabold text-primary">3 mg</span></p>
+<p class="text-base">Vehículo c.s.</p>
+</div>
+</div>
+
+<!-- Ampolla No. 2 -->
+<div class="bg-background-light dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary">
+<p class="text-lg font-bold mb-3">Cada ampolla No. 2 de 2 mL contiene:</p>
+<div class="space-y-2">
+<p class="text-base"><span class="font-semibold">Diclofenaco Sódico</span> <span class="float-right font-extrabold text-primary">75 mg</span></p>
+<p class="text-base">Vehículo c.s.</p>
+</div>
+</div>
+</section>
+
+<!-- Acción Terapéutica -->
+<section class="mb-12 bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span>
+                ACCIÓN TERAPÉUTICA
+            </h2>
+<p class="text-slate-600 dark:text-slate-400">KADIFLEX® 25 es un antiinflamatorio con acción analgésica y antineurítica.</p>
+</section>
+
+<!-- Indications Section -->
+<section class="mb-12" id="indicaciones">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">clinical_notes</span>
+                INDICACIONES
+            </h2>
+
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-slate-600 dark:text-slate-400 mb-4">KADIFLEX® 25 está indicado en:</p>
+<ul class="text-slate-600 dark:text-slate-400 space-y-2 list-disc ml-4">
+<li>Neuritis y neuralgias, tales como síndrome cervical, lumbago y ciática.</li>
+<li>Procesos reumáticos dolorosos, tanto inflamatorios como degenerativos, activados por inflamación, artrosis, espondiloartrosis anquilosante (Morbus Bechterew), ataque agudo de gota.</li>
+<li>Reumatismo de los tejidos blandos y afecciones inflamatorias dolorosas no reumáticas.</li>
+</ul>
+</div>
+</section>
+
+<!-- Contraindications Section -->
+<section class="mb-12" id="contraindicaciones">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-danger">block</span>
+                CONTRAINDICACIONES
+            </h2>
+<div class="p-6 bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-900/30 rounded-xl">
+<ul class="text-sm text-red-800 dark:text-red-300 leading-relaxed space-y-3 list-disc ml-4">
+<li>Hipersensibilidad al medicamento.</li>
+<li>Trastornos hematopoyéticos no aclarados.</li>
+<li>Niños menores de 12 años.</li>
+<li>Último trimestre de embarazo.</li>
+<li>Úlcera gástrica y duodenal.</li>
+</ul>
+</div>
+</section>
+
+<!-- Warnings Section -->
+<section class="mb-12" id="advertencias">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-warning">warning</span>
+                ADVERTENCIAS
+            </h2>
+<div class="p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-900/30 rounded-xl">
+<p class="text-sm text-amber-800 dark:text-amber-300 font-medium">Contiene alcohol bencílico, no administrar a niños menores de 6 meses.</p>
+</div>
+</section>
+
+<!-- Interactions Section -->
+<section class="mb-12" id="interacciones">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">sync_alt</span>
+                INTERACCIONES MEDICAMENTOSAS
+            </h2>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-slate-600 dark:text-slate-400">Se debe evitar el uso simultáneo de KADIFLEX® 25, con otros medicamentos tales como: digoxina, litio, diuréticos, antihipertensivos, glucocorticoides, metotrexato, ácido acetilsalicílico y L-dopa.</p>
+</div>
+</section>
+
+<!-- Adverse Effects Section -->
+<section class="mb-12" id="efectos">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">priority_high</span>
+                EFECTOS SECUNDARIOS
+            </h2>
+
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-slate-600 dark:text-slate-400 mb-4">Ocasionalmente se ha observado:</p>
+<ul class="text-slate-600 dark:text-slate-400 space-y-2 list-disc ml-4">
+<li>Vómitos</li>
+<li>Diarrea</li>
+<li>Cefaleas</li>
+<li>Insomnio</li>
+<li>La inyección intramuscular puede provocar dolor e induración, abscesos locales y necrosis en el lugar de la inyección.</li>
+</ul>
+</div>
+</section>
+
+<!-- Recommendations Section -->
+<section class="mb-12" id="recomendaciones">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">info</span>
+                RECOMENDACIONES
+            </h2>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-slate-600 dark:text-slate-400">Realizar prueba hepática como transaminasas en pacientes con terapias prolongadas con diclofenaco.</p>
+</div>
+</section>
+
+<!-- Dosage Section -->
+<section class="mb-12" id="dosificacion">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">medication</span>
+                MODO DE EMPLEO
+            </h2>
+
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="p-4 bg-primary/10 border-b border-slate-100 dark:border-slate-800">
+<h4 class="font-bold">Administración</h4>
+</div>
+<div class="p-6 text-sm text-slate-600 dark:text-slate-400">
+<p class="bg-primary/5 p-4 rounded-lg font-medium">Mezclar las ampollas No. 1 y No. 2 en una jeringa no menos de 3 mL e inyectarla lentamente por vía intramuscular profunda, <strong>1 dosis al día</strong>.</p>
+</div>
+</div>
+</section>
+
+<!-- Presentation Section -->
+<section class="mb-12" id="presentacion">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">package_2</span>
+                PRESENTACIÓN
+            </h2>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-lg font-medium text-slate-700 dark:text-slate-300">
+Caja con 1 ampolla No. 1 de 1 mL, ampolla No. 2 de 2 mL. Incluye jeringa descartable y toallita con alcohol.
+</p>
+</div>
+</section>
+
+<!-- Professional Advice Banner -->
+<div class="bg-primary rounded-2xl p-8 text-white text-center shadow-xl shadow-primary/20 mb-12">
+<h2 class="text-2xl font-extrabold mb-4 italic">"La salud es lo primero"</h2>
+<p class="opacity-90 max-w-lg mx-auto">Esta información es de carácter orientativo. El uso de este medicamento debe ser supervisado por un profesional de la salud colegiado.</p>
+</div>
+</main>
+
+<!-- Medical Footer -->
+<footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-[960px] mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div class="col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl">medical_services</span>
+<span class="font-extrabold text-lg tracking-tight">KADIFLEX® 25</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Producto farmacéutico de alta pureza. Elaborado bajo estrictas normas de GMP (Buenas Prácticas de Manufactura).
+                    </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-slate-400">Fabricación</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Producto Centroamericano fabricado en Guatemala por:<br/>
+<span class="font-bold">Laboratorio Industrial San Cristóbal S.A.</span><br/>
+                        para <span class="font-bold">Viparsa</span>.<br/><br/>
+                        Acondicionador primario:<br/>
+<span class="font-bold">Farmaquila S.A., Guatemala.</span>
+                    </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-slate-400">Legal</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+                        Registro: [PENDIENTE]<br/>
+                        Venta bajo receta médica.<br/>
+                        Manténgase fuera del alcance de los niños.<br/>
+                        Consérvese a menos de 30°C.
+                    </p>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+<p>© 2026 VIPARSA®. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:underline" href="#">Políticas de Privacidad</a>
+<a class="hover:underline" href="#">Términos de Uso</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
