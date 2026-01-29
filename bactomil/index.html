@@ -1,1 +1,378 @@
 
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BACTOMIL® - Información Médica Profesional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F470BB",
+                        "danger": "#dc3545",
+                        "warning": "#ffc107",
+                        "background-light": "#f9fafb",
+                        "background-dark": "#111827",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .progress-bar-container {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            width: 100%;
+            z-index: 40;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Sticky Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-[960px] mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<span class="font-extrabold text-xl tracking-tight">BACTOMIL® <span class="text-primary">400 MG</span></span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#indicaciones">Indicaciones</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#dosificacion">Dosis</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#advertencias">Seguridad</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#efectos">Efectos</a>
+</div>
+<button class="md:hidden text-slate-600">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Progress Bar Indicator -->
+<div class="h-1 bg-slate-100 dark:bg-slate-800 w-full">
+<div class="h-full bg-primary" style="width: 35%;"></div>
+</div>
+</header>
+<main class="max-w-[800px] mx-auto px-4 py-8">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="rounded-xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<h1 class="text-4xl md:text-5xl font-extrabold mb-2 leading-tight">BACTOMIL®</h1>
+<p class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4">Cápsulas de cefixima 400 mg</p>
+<div class="flex gap-3">
+<a class="bg-primary text-white px-6 py-3 rounded-lg font-bold text-center flex-1 md:flex-none" href="#dosificacion">Guía de Dosis</a>
+</div>
+</div>
+<div class="md:w-1/2 min-h-[300px] bg-slate-100 relative overflow-hidden">
+<img class="w-full h-full object-contain p-8" alt="BACTOMIL 400mg - Caja del producto" src="Bactomil.png"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Access Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#indicaciones">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">stethoscope</span>
+<span class="text-sm font-bold">Indicaciones</span>
+</a>
+<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#dosificacion">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">schedule</span>
+<span class="text-sm font-bold">Dosificación</span>
+</a>
+<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#advertencias">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">report_problem</span>
+<span class="text-sm font-bold">Advertencias</span>
+</a>
+<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#efectos">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">analytics</span>
+<span class="text-sm font-bold">Efectos</span>
+</a>
+</section>
+
+<!-- Formula / Composition Card -->
+<section class="mb-12 bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">science</span>
+                FÓRMULA
+            </h2>
+<div class="bg-background-light dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary">
+<p class="text-lg font-medium mb-2">Cada cápsula contiene:</p>
+<div class="space-y-2">
+<p class="text-lg"><span class="font-semibold">Cefixima</span> <span class="float-right font-extrabold text-primary">400 mg</span></p>
+</div>
+</div>
+</section>
+
+<!-- Indications Section -->
+<section class="mb-12" id="indicaciones">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">clinical_notes</span>
+                INDICACIONES
+            </h2>
+
+<p class="text-slate-600 dark:text-slate-400 mb-6 px-4">Está indicado en el tratamiento de las infecciones causadas por microorganismos susceptibles a las cefalosporinas, tales como:</p>
+
+<div class="grid gap-4">
+<div class="flex gap-4 p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg h-fit">nephrology</span>
+<div>
+<h4 class="font-bold text-lg">Infecciones del tracto genitourinario</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Causadas por <em>Escherichia coli</em> y <em>Proteus mirabilis</em>.</p>
+</div>
+</div>
+
+<div class="flex gap-4 p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg h-fit">hearing</span>
+<div>
+<h4 class="font-bold text-lg">Otitis media</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Causada por <em>Haemophilus influenzae</em> (cepas β-lactamasa positivas y negativas) y <em>Streptococcus pneumoniae</em>.</p>
+</div>
+</div>
+
+<div class="flex gap-4 p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg h-fit">record_voice_over</span>
+<div>
+<h4 class="font-bold text-lg">Faringitis y amigdalitis</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Causadas por <em>Streptococcus pyogenes</em>.</p>
+</div>
+</div>
+
+<div class="flex gap-4 p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg h-fit">pulmonology</span>
+<div>
+<h4 class="font-bold text-lg">Bronquitis aguda y exacerbaciones de bronquitis crónica</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Causada por <em>Streptococcus pneumoniae</em> y <em>Haemophilus influenzae</em>.</p>
+</div>
+</div>
+
+<div class="flex gap-4 p-5 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg h-fit">biotech</span>
+<div>
+<h4 class="font-bold text-lg">Gonorrea no complicada (cervical y uretral)</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Causada por <em>N. gonorrhoeae</em> (especies productoras y no productoras de penicilinasa).</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contraindications Section -->
+<section class="mb-12" id="contraindicaciones">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-danger">block</span>
+                CONTRAINDICACIONES
+            </h2>
+<div class="p-6 bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-900/30 rounded-xl">
+<ul class="text-sm text-red-800 dark:text-red-300 leading-relaxed space-y-3 list-disc ml-4">
+<li>Pacientes con antecedentes de hipersensibilidad del tipo cefalosporinas o penicilinas.</li>
+<li>Si se presenta alguna reacción alérgica con la administración se debe discontinuar de inmediato el tratamiento y notificar al médico.</li>
+</ul>
+</div>
+</section>
+
+<!-- Warnings Section -->
+<section class="mb-12" id="advertencias">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-warning">warning</span>
+                ADVERTENCIAS Y PRECAUCIONES
+            </h2>
+<div class="space-y-4">
+<div class="p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-900/30 rounded-xl">
+<h3 class="text-amber-700 dark:text-amber-500 font-bold flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                        Precauciones Generales
+                    </h3>
+<ul class="text-sm text-amber-800 dark:text-amber-300 space-y-2 list-disc ml-4">
+<li>El uso prolongado puede dar lugar a sobreinfecciones producidas por microorganismos no susceptibles (ej. <em>Enterococcus</em> o <em>Clostridium sp.</em>).</li>
+<li>Se debe vigilar la función renal en pacientes con insuficiencia renal.</li>
+<li>No se ha observado efecto adverso en el lactante, por lo que no es necesario suspender la lactancia durante el tiempo del tratamiento.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Interactions Section -->
+<section class="mb-12" id="interacciones">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">sync_alt</span>
+                INTERACCIONES
+            </h2>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-4 list-disc ml-4">
+<li><strong>Carbamazepina:</strong> El uso concomitante puede incrementar los niveles plasmáticos de carbamazepina.</li>
+<li><strong>Anticoagulantes (ej. warfarina):</strong> Con el uso concomitante puede incrementarse el tiempo de protrombina y el riesgo de sangrado clínico.</li>
+</ul>
+</div>
+</section>
+
+<!-- Adverse Effects Section -->
+<section class="mb-12" id="efectos">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">priority_high</span>
+                REACCIONES ADVERSAS
+            </h2>
+<p class="text-slate-600 dark:text-slate-400 mb-6 px-4">La mayoría son transitorias y leves.</p>
+
+<div class="space-y-4">
+<!-- Frecuentes -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden">
+<div class="p-4 bg-green-50 dark:bg-green-900/20 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded">Más frecuentes (Gastrointestinales)</span>
+</div>
+</div>
+<div class="p-6">
+<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc ml-4">
+<li>Diarrea</li>
+<li>Náuseas</li>
+<li>Vómitos</li>
+<li>Dolor abdominal</li>
+</ul>
+</div>
+</div>
+
+<!-- Otras reacciones -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden">
+<div class="p-4 bg-yellow-50 dark:bg-yellow-900/20 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded">Otras reacciones</span>
+</div>
+</div>
+<div class="p-6">
+<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc ml-4">
+<li>Elevaciones transitorias de las enzimas hepáticas (SGPT y SGOT)</li>
+<li>Dolor de cabeza</li>
+<li>Mareos</li>
+<li>Alteraciones en la función renal</li>
+<li>Prurito genital</li>
+<li>Vaginitis</li>
+<li>Candidiasis</li>
+</ul>
+</div>
+</div>
+
+<!-- Graves -->
+<div class="border border-red-200 dark:border-red-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden">
+<div class="p-4 bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800">
+<div class="flex items-center gap-3">
+<span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded">Advertencia importante</span>
+</div>
+</div>
+<div class="p-6">
+<p class="text-sm text-red-700 dark:text-red-300">Al igual que con otros antibióticos de amplio espectro, existe la posibilidad de aparición de <strong>colitis pseudomembranosa</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Dosage Section -->
+<section class="mb-12" id="dosificacion">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary">medication</span>
+                DOSIS Y ADMINISTRACIÓN
+            </h2>
+
+<!-- Adultos -->
+<div class="mb-8">
+<h3 class="text-xl font-bold mb-4 px-4 text-primary">Adultos</h3>
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mb-4">
+<div class="p-4 bg-primary/10 border-b border-slate-100 dark:border-slate-800">
+<h4 class="font-bold">Dosis general</h4>
+</div>
+<div class="p-6 text-sm text-slate-600 dark:text-slate-400">
+<p>La dosis recomendada es de <strong>400 mg (1 cápsula) diaria</strong>.</p>
+<p class="mt-2">Puede administrarse 400 mg/día en una sola toma, o dos tomas de 200 mg cada 12 horas.</p>
+</div>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mb-4">
+<div class="p-4 bg-primary/10 border-b border-slate-100 dark:border-slate-800">
+<h4 class="font-bold">Gonorrea no complicada (cervical/uretral)</h4>
+</div>
+<div class="p-6 text-sm text-slate-600 dark:text-slate-400">
+<p class="bg-primary/5 p-4 rounded-lg font-medium">Se recomienda una <strong>sola dosis de 400 mg</strong>.</p>
+</div>
+</div>
+</div>
+
+<!-- Niños -->
+<div class="mb-8">
+<h3 class="text-xl font-bold mb-4 px-4 text-primary">Niños</h3>
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="p-4 bg-primary/10 border-b border-slate-100 dark:border-slate-800">
+<h4 class="font-bold">Dosis pediátrica</h4>
+</div>
+<div class="p-6 text-sm text-slate-600 dark:text-slate-400">
+<p><strong>8 mg/kg/día</strong> en una sola toma, o dos tomas de <strong>4 mg/kg cada 12 horas</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Professional Advice Banner -->
+<div class="bg-primary rounded-2xl p-8 text-white text-center shadow-xl shadow-primary/20 mb-12">
+<h2 class="text-2xl font-extrabold mb-4 italic">"La salud es lo primero"</h2>
+<p class="mb-8 opacity-90 max-w-lg mx-auto">Esta información es de carácter orientativo. El uso de este medicamento debe ser supervisado por un profesional de la salud colegiado.</p>
+</div>
+</main>
+
+<!-- Medical Footer -->
+<footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-[960px] mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div class="col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl">medical_services</span>
+<span class="font-extrabold text-lg tracking-tight">BACTOMIL® <span class="text-primary">400 MG</span></span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Producto farmacéutico de alta pureza. Elaborado bajo estrictas normas de GMP (Buenas Prácticas de Manufactura).
+                    </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-slate-400">Fabricación</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Producto Centroamericano fabricado en Guatemala por:<br/>
+<span class="font-bold">Laboratorio Industrial San Cristóbal S.A.</span><br/>
+                        para <span class="font-bold">Viparsa</span>.<br/><br/>
+                        Acondicionador primario:<br/>
+<span class="font-bold">Farmaquila S.A., Guatemala.</span>
+                    </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-slate-400">Legal</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+                        Registro: [PENDIENTE]<br/>
+                        Venta bajo receta médica.<br/>
+                        Manténgase fuera del alcance de los niños.<br/>
+                        Consérvese a menos de 30°C.
+                    </p>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+<p>© 2026 VIPARSA®. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:underline" href="#">Políticas de Privacidad</a>
+<a class="hover:underline" href="#">Términos de Uso</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
