@@ -1,184 +1,452 @@
 
-<!DOCTYPE html>
-
-<html class="light" lang="es"><head>
+<html class="light" lang="es">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
 <title>KADIFLEX DX® - Información Médica Profesional</title>
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#10069f",
-                        "danger": "#ff0720",
-                        "warning": "#ffc107",
-                        "background-light": "#f9fafb",
-                        "background-dark": "#111827",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#10069f",
+                "danger": "#ff0720",
+                "warning": "#ffc107",
+                "background-light": "#f9fafb",
+                "background-dark": "#111827",
             },
-        }
-    </script>
+
+            fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+            },
+
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+        },
+    },
+}
+</script>
+
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .progress-bar-container {
-            position: fixed;
-            top: 64px;
-            left: 0;
-            width: 100%;
-            z-index: 40;
-        }
-    </style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.progress-bar-container {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    z-index: 40;
+}
+
+/* Evita que el menú fijo tape el título de cada sección */
+section[id] {
+    scroll-margin-top: 90px;
+}
+</style>
+
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
-<!-- Sticky Navigation -->
+
+<!-- ========================= -->
+<!-- MENÚ PRINCIPAL -->
+<!-- ========================= -->
+
 <header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-[960px] mx-auto px-4 h-16 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
-<span class="font-extrabold text-xl tracking-tight">KADIFLEX DX®</span>
-</div>
-<div class="hidden md:flex items-center gap-6">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#INDICACIONES">INDICACIONES</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#CONTRAINDICACIONES">CONTRAINDICACIONES</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#ADVERTENCIAS">ADVERTENCIAS</a>
-</div>
-<button class="md:hidden text-slate-600">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-<!-- Progress Bar Indicator -->
-<div class="h-1 bg-slate-100 dark:bg-slate-800 w-full">
-<div class="h-full bg-primary" style="width: 35%;"></div>
-</div>
-</header>
-<main class="max-w-[800px] mx-auto px-4 py-8">
-<!-- Hero Section -->
-<section class="mb-12">
-<div class="rounded-xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-<div class="flex flex-col md:flex-row">
-<div class="md:w-1/2 p-8 flex flex-col justify-center">
-<h1 class="text-4xl md:text-5xl font-extrabold mb-2 leading-tight">Kadiflex DX®</h1>
-<div class="flex gap-3">
 
-</div>
-</div>
-<div class="md:w-1/2 min-h-[300px] bg-slate-100 relative overflow-hidden">
-<img class="w-full h-full object-contain p-8" alt="KADIFLEX - Caja del producto" src="Kadiflex.png"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Quick Access Grid -->
-<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#INDICACIONES">
-<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">stethoscope</span>
-<span class="text-sm font-bold">INDICACIONES</span>
-</a>
-<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#CONTRAINDICACIONES">
-<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">schedule</span>
-<span class="text-sm font-bold">CONTRAINDICACIONES</span>
-</a>
-<a class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group" href="#ADVERTENCIAS">
-<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">report_problem</span>
-<span class="text-sm font-bold">ADVERTENCIAS</span>
-</a>
-</section>
-</div>
+    <div class="max-w-[960px] mx-auto px-4 h-16 flex items-center justify-between">
 
-</div>
-</section>
+        <div class="flex items-center gap-2">
 
-<!-- Indications Section -->
-<section class="mb-12" id="INDICACIONES">
-<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
-<span class="material-symbols-outlined text-primary">stethoscope</span>
+            <span class="material-symbols-outlined text-primary text-3xl">
+                medical_services
+            </span>
+
+            <span class="font-extrabold text-xl tracking-tight">
+                KADIFLEX DX®
+            </span>
+
+        </div>
+
+        <!-- Menú para computadora -->
+        <div class="hidden md:flex items-center gap-6">
+
+            <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#INDICACIONES">
                 INDICACIONES
-            </h2>
+            </a>
 
-<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
-<p class="text-slate-600 dark:text-slate-400">Síndromes dolorosos con base inflamatoria, independientemente de su origen. Inflamación aguda a nivel nervioso y articular. Artritis, periartritis, sinovitis y neuralgias.</p>
-</div>
-</section>
-
-<!-- Contraindications Section -->
-<section class="mb-12" id="CONTRAINDICACIONES">
-<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
-<span class="material-symbols-outlined text-danger">block</span>
+            <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#CONTRAINDICACIONES">
                 CONTRAINDICACIONES
-            </h2>
-<div class="p-6 bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-900/30 rounded-xl">
-<ul class="text-sm text-red-800 dark:text-red-300 leading-relaxed space-y-3 list-disc ml-4">
-<li>Hipersensibilidad al medicamento. Embarazo, hipertensión arterial, diabetes mellitus, úlcera péptica y cuadros infecciosos.</li>
-</ul>
-</div>
-</section>
+            </a>
 
-<!-- Warnings Section -->
-<section class="mb-12" id="ADVERTENCIAS">
-<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
-<span class="material-symbols-outlined text-warning">warning</span>
+            <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#ADVERTENCIAS">
                 ADVERTENCIAS
-            </h2>
-<div class="p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-900/30 rounded-xl">
-<p class="text-sm text-amber-800 dark:text-amber-300 font-medium">El uso prolongado y a dosis altas puede ocasionar Síndrome de Cushing, hipertensión arterial, alteración del metabolismo de los carbohidratos, susceptibilidad a infecciones, catarata prematura, glaucoma, osteoporosis y en niños detención del crecimiento. Utilizado con diuréticos incrementa la pérdida de potasio. Por contener alcohol bencílico, no utilizar en niños menores de 6 meses. Contiene bisulfitos que pueden ocasionar reacciones alérgicas en personas sensibles.</p>
-</div>
-</section>
+            </a>
 
-<!-- Medical Footer -->
+        </div>
+
+        <!-- Botón para móvil -->
+        <button class="md:hidden text-slate-600">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="h-1 bg-slate-100 dark:bg-slate-800 w-full">
+
+        <div
+            class="h-full bg-primary"
+            style="width: 35%;">
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ========================= -->
+<!-- CONTENIDO PRINCIPAL -->
+<!-- ========================= -->
+
+<main class="max-w-[800px] mx-auto px-4 py-8">
+
+
+    <!-- ========================= -->
+    <!-- PRESENTACIÓN DEL PRODUCTO -->
+    <!-- ========================= -->
+
+    <section class="mb-12">
+
+        <div class="rounded-xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+
+            <div class="flex flex-col md:flex-row">
+
+                <!-- Información -->
+                <div class="md:w-1/2 p-8 flex flex-col justify-center">
+
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-2 leading-tight">
+                        Kadiflex DX®
+                    </h1>
+
+                    <div class="flex gap-3">
+                    </div>
+
+                </div>
+
+                <!-- Imagen del producto -->
+                <div class="md:w-1/2 min-h-[300px] bg-slate-100 relative overflow-hidden">
+
+                    <img
+                        class="w-full h-full object-contain p-8"
+                        alt="KADIFLEX - Caja del producto"
+                        src="Kadiflex.png"
+                    />
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- ACCESOS RÁPIDOS -->
+    <!-- ========================= -->
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+
+        <!-- INDICACIONES -->
+        <a
+            class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group"
+            href="#INDICACIONES">
+
+            <span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">
+                stethoscope
+            </span>
+
+            <span class="text-sm font-bold">
+                INDICACIONES
+            </span>
+
+        </a>
+
+
+        <!-- CONTRAINDICACIONES -->
+        <a
+            class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group"
+            href="#CONTRAINDICACIONES">
+
+            <span class="material-symbols-outlined text-danger text-3xl mb-2 group-hover:scale-110 transition-transform">
+                block
+            </span>
+
+            <span class="text-sm font-bold">
+                CONTRAINDICACIONES
+            </span>
+
+        </a>
+
+
+        <!-- ADVERTENCIAS -->
+        <a
+            class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all group"
+            href="#ADVERTENCIAS">
+
+            <span class="material-symbols-outlined text-warning text-3xl mb-2 group-hover:scale-110 transition-transform">
+                report_problem
+            </span>
+
+            <span class="text-sm font-bold">
+                ADVERTENCIAS
+            </span>
+
+        </a>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- INDICACIONES -->
+    <!-- ========================= -->
+
+    <section
+        class="mb-12"
+        id="INDICACIONES">
+
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+
+            <span class="material-symbols-outlined text-primary">
+                stethoscope
+            </span>
+
+            INDICACIONES
+
+        </h2>
+
+
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+
+            <p class="text-slate-600 dark:text-slate-400">
+
+                Síndromes dolorosos con base inflamatoria, independientemente de su origen. Inflamación aguda a nivel nervioso y articular. Artritis, periartritis, sinovitis y neuralgias.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- CONTRAINDICACIONES -->
+    <!-- ========================= -->
+
+    <section
+        class="mb-12"
+        id="CONTRAINDICACIONES">
+
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+
+            <span class="material-symbols-outlined text-danger">
+                block
+            </span>
+
+            CONTRAINDICACIONES
+
+        </h2>
+
+
+        <div class="p-6 bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-900/30 rounded-xl">
+
+            <ul class="text-sm text-red-800 dark:text-red-300 leading-relaxed space-y-3 list-disc ml-4">
+
+                <li>
+
+                    Hipersensibilidad al medicamento. Embarazo, hipertensión arterial, diabetes mellitus, úlcera péptica y cuadros infecciosos.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- ADVERTENCIAS -->
+    <!-- ========================= -->
+
+    <section
+        class="mb-12"
+        id="ADVERTENCIAS">
+
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-4">
+
+            <span class="material-symbols-outlined text-warning">
+                warning
+            </span>
+
+            ADVERTENCIAS
+
+        </h2>
+
+
+        <div class="p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-900/30 rounded-xl">
+
+            <p class="text-sm text-amber-800 dark:text-amber-300 font-medium">
+
+                El uso prolongado y a dosis altas puede ocasionar Síndrome de Cushing, hipertensión arterial, alteración del metabolismo de los carbohidratos, susceptibilidad a infecciones, catarata prematura, glaucoma, osteoporosis y en niños detención del crecimiento. Utilizado con diuréticos incrementa la pérdida de potasio. Por contener alcohol bencílico, no utilizar en niños menores de 6 meses. Contiene bisulfitos que pueden ocasionar reacciones alérgicas en personas sensibles.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- ========================= -->
+<!-- PIE DE PÁGINA -->
+<!-- ========================= -->
+
 <footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
-<div class="max-w-[960px] mx-auto px-4">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-<div class="col-span-1">
-<div class="flex items-center gap-2 mb-4">
-<span class="material-symbols-outlined text-primary text-2xl">medical_services</span>
-<span class="font-extrabold text-lg tracking-tight">KADIFLEX DX®</span>
-</div>
-<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        Producto farmacéutico de alta pureza. Elaborado bajo estrictas normas de GMP (Buenas Prácticas de Manufactura).
-                    </p>
-</div>
-<div class="col-span-1">
-<h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-slate-400">Fabricación</h4>
-<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Producto Centroamericano hecho en Guatemala por:<br/>
-<span class="font-bold">Laboratorios Lamfer</span><br/>
-                        para <span class="font-bold">VIPARSA</span>.
-                    </p>
-</div>
-<div class="col-span-1">
-<h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-slate-400">Legal</h4>
-<p class="text-xs text-slate-500 leading-relaxed">
-                        Registro Sanitario: PF-60823<br/>
-                        Venta bajo receta médica.<br/>
-                        Manténgase fuera del alcance de los niños.<br/>
-                        Consérvese a menos de 30 °C.
-                    </p>
-</div>
-</div>
-<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-<p>© 2026 VIPARSA®. Todos los derechos reservados.</p>
-<div class="flex gap-6">
-<a class="hover:underline" href="#">Políticas de Privacidad</a>
-<a class="hover:underline" href="#">Términos de Uso</a>
-</div>
-</div>
-</div>
+
+    <div class="max-w-[960px] mx-auto px-4">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+
+            <!-- Información del producto -->
+            <div class="col-span-1">
+
+                <div class="flex items-center gap-2 mb-4">
+
+                    <span class="material-symbols-outlined text-primary text-2xl">
+                        medical_services
+                    </span>
+
+                    <span class="font-extrabold text-lg tracking-tight">
+                        KADIFLEX DX®
+                    </span>
+
+                </div>
+
+
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+
+                    Producto farmacéutico de alta pureza. Elaborado bajo estrictas normas de GMP (Buenas Prácticas de Manufactura).
+
+                </p>
+
+            </div>
+
+
+            <!-- Fabricación -->
+            <div class="col-span-1">
+
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-slate-400">
+                    Fabricación
+                </h4>
+
+
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+
+                    Producto Centroamericano hecho en Guatemala por:<br/>
+
+                    <span class="font-bold">
+                        Laboratorios Lamfer
+                    </span>
+
+                    <br/>
+
+                    para
+
+                    <span class="font-bold">
+                        VIPARSA
+                    </span>.
+
+                </p>
+
+            </div>
+
+
+            <!-- Información legal -->
+            <div class="col-span-1">
+
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-slate-400">
+                    Legal
+                </h4>
+
+
+                <p class="text-xs text-slate-500 leading-relaxed">
+
+                    Registro Sanitario: PF-60823<br/>
+                    Venta bajo receta médica.<br/>
+                    Manténgase fuera del alcance de los niños.<br/>
+                    Consérvese a menos de 30 °C.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+
+            <p>
+                © 2026 VIPARSA®. Todos los derechos reservados.
+            </p>
+
+
+            <div class="flex gap-6">
+
+                <a class="hover:underline" href="#">
+                    Políticas de Privacidad
+                </a>
+
+                <a class="hover:underline" href="#">
+                    Términos de Uso
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </footer>
-</body></html>
+
+
+</body>
+</html>
